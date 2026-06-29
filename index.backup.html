@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun - Backend Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js" class="fixed inset-0 pointer-events-none"></div>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-gray-900 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#"
+                    class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Arjun
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#testimonials" class="hover:text-blue-400 transition-colors">Testimonials</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 backdrop-blur-sm z-50">
+                        <div class="flex justify-end p-4">
+                            <button id="close-menu" class="text-white">
+                                <i class="fas fa-times text-2xl"></i>
+                            </button>
+                        </div>
+                        <div class="flex flex-col items-center space-y-8 p-8">
+                            <a href="#about" class="text-xl hover:text-blue-400 transition-colors">About</a>
+                            <a href="#projects" class="text-xl hover:text-blue-400 transition-colors">Projects</a>
+                            <a href="#experience" class="text-xl hover:text-blue-400 transition-colors">Experience</a>
+                            <a href="#contact" class="text-xl hover:text-blue-400 transition-colors">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/30 rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/30 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10" data-aos="fade-up">
+            <div class="mb-8">
+                <span class="px-6 py-2 bg-blue-500/20 border border-blue-500/50 rounded-full text-blue-400 text-sm font-semibold">
+                    <i class="fas fa-code mr-2"></i>Backend Developer & Problem Solver
+                </span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 leading-tight">
+                Hi, I'm <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">Arjun</span>
+            </h1>
+            <div class="text-3xl md:text-5xl font-light mb-8 text-gray-300">
+                I build <span id="typing-text" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 font-semibold"></span>
+            </div>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto"></p>
+                Crafting scalable backend solutions with modern technologies. Passionate about DSA, system design, and building robust APIs.
+            </p>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <a href="#contact"
+                    class="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-purple-500/50 font-semibold">
+                    <i class="fas fa-envelope mr-2"></i>Contact Me
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#projects"
+                    class="group px-8 py-4 border-2 border-blue-400 hover:bg-blue-400/20 rounded-full transition-all transform hover:scale-105 font-semibold">
+                    <i class="fas fa-briefcase mr-2"></i>View Work
+                    <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i>
+                </a>
+            </div>
+            <div class="mt-16 flex justify-center gap-6">
+                <a href="https://github.com/Arjun9756" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+                    <i class="fab fa-github text-3xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arjun-singh-negi-60b983302/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+                    <i class="fab fa-linkedin text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500 to-purple-500"></div>
+        </div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">About Me</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Get to know me better</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6" data-aos="fade-right">
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        I'm a passionate <span class="text-blue-400 font-semibold">Backend Developer</span> with a strong foundation in 
+                        <span class="text-purple-400 font-semibold">DSA</span> and problem-solving.
+                        With <span class="text-blue-400 font-semibold">1+ years</span> of experience in web development, I create engaging and responsive web
+                        applications that deliver exceptional user experiences.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        I specialize in building scalable backend systems, designing efficient APIs, and solving complex algorithmic challenges.
+                        My expertise spans across modern technologies including Node.js, microservices, message queues, and distributed systems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-center pt-6">
+                        <div class="p-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl border border-blue-500/30 transform hover:scale-105 transition-all">
+                            <h4 class="text-3xl font-bold text-blue-400 mb-2">1+</h4>
+                            <p class="text-gray-300">Years Experience</p>
+                        </div>
+                        <div class="p-6 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl border border-purple-500/30 transform hover:scale-105 transition-all">
+                            <h4 class="text-3xl font-bold text-purple-400 mb-2">20+</h4>
+                            <p class="text-gray-300">Projects Completed</p>
+                        </div>
+                        <div class="p-6 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-2xl border border-green-500/30 transform hover:scale-105 transition-all">
+                            <h4 class="text-3xl font-bold text-green-400 mb-2">850+</h4>
+                            <p class="text-gray-300">DSA Problems Solved</p>
+                        </div>
+                        <div class="p-6 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl border border-pink-500/30 transform hover:scale-105 transition-all">
+                            <h4 class="text-3xl font-bold text-pink-400 mb-2">100%</h4>
+                            <p class="text-gray-300">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-[500px] rounded-3xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20"></div>
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Profile" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-500/30 rounded-full filter blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-purple-500/30 rounded-full filter blur-2xl"></div>
+                </div>
+            </div>
+            
+            <!-- Experience Section -->
+            <div class="mt-20" data-aos="fade-up">
+                <h3 class="text-3xl font-bold mb-8 text-center">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Professional Experience</span>
+                </h3>
+                <div class="max-w-4xl mx-auto">
+                    <div class="p-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all transform hover:scale-105">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-blue-500/20 rounded-xl">
+                                <i class="fas fa-code text-3xl text-blue-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold text-blue-400 mb-2">Backend Developer</h4>
+                                <p class="text-gray-400 mb-4 flex items-center">
+                                    <i class="fas fa-calendar-alt mr-2"></i>1+ Year Experience
+                                </p>
+                                <ul class="space-y-3 text-gray-300">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+                                        <span>500+ DSA Problems Solved on LeetCode & GeeksForGeeks</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+                                        <span>Proficient in Data Structures & Algorithms</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+                                        <span>Strong Problem-Solving Skills</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+                                        <span>Experience with Modern Web Technologies</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Technical Arsenal</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Technologies I work with</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- HTML5 -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/30 border border-gray-700 hover:border-orange-500/50" data-aos="zoom-in" data-aos-delay="0">
+                    <i class="fab fa-html5 text-6xl text-orange-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">HTML5</h3>
+                </div>
+                
+                <!-- JavaScript -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 border border-gray-700 hover:border-yellow-500/50" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="fab fa-js text-6xl text-yellow-400 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">JavaScript</h3>
+                </div>
+                
+                <!-- Node.js -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/30 border border-gray-700 hover:border-green-500/50" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-node-js text-6xl text-green-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">Node.js</h3>
+                </div>
+                
+                <!-- Go -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/30 border border-gray-700 hover:border-cyan-400/50" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fab fa-golang text-6xl text-cyan-400 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">Golang</h3>
+                </div>
+                
+                <!-- Git -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-600/30 border border-gray-700 hover:border-orange-600/50" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-git-alt text-6xl text-orange-600 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">Git</h3>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-400/30 border border-gray-700 hover:border-gray-400/50" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="fab fa-github text-6xl text-gray-400 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">GitHub</h3>
+                </div>
+                
+                <!-- MongoDB -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/30 border border-gray-700 hover:border-green-400/50" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-database text-6xl text-green-400 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">MongoDB</h3>
+                </div>
+                
+                <!-- SQL -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/30 border border-gray-700 hover:border-blue-600/50" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="fas fa-server text-6xl text-blue-600 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">SQL</h3>
+                </div>
+                
+                <!-- Redis -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/30 border border-gray-700 hover:border-red-500/50" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-memory text-6xl text-red-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">Redis</h3>
+                </div>
+                
+                <!-- Bull MQ -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 border border-gray-700 hover:border-purple-500/50" data-aos="zoom-in" data-aos-delay="450">
+                    <i class="fas fa-tasks text-6xl text-purple-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">Bull MQ</h3>
+                </div>
+                
+                <!-- System Design -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 border border-gray-700 hover:border-indigo-500/50" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-sitemap text-6xl text-indigo-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">System Design</h3>
+                </div>
+                
+                <!-- gRPC -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 border border-gray-700 hover:border-cyan-500/50" data-aos="zoom-in" data-aos-delay="550">
+                    <i class="fas fa-network-wired text-6xl text-cyan-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">gRPC</h3>
+                </div>
+                
+                <!-- LangCache -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/30 border border-gray-700 hover:border-pink-500/50" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-link text-6xl text-pink-500 mb-4 group-hover:animate-bounce"></i>
+                    <h3 class="text-lg font-semibold text-gray-200">LangCache</h3>
+                </div>
+                
+                <!-- Kafka -->
+                <div class="group p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl text-center transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/30 border border-gray-700 hover:border-teal-500/50" data-aos="zoom-in" data-aos-delay="650">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-white group-hover:animate-bounce" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.75 14.5c-1.24 0-2.25-1.01-2.25-2.25 0-.17.02-.34.06-.5l-3.06-1.77c-.48.45-1.13.73-1.84.73-.71 0-1.36-.28-1.84-.73L5.75 11.75c.04.16.06.33.06.5 0 1.24-1.01 2.25-2.25 2.25S1.31 13.49 1.31 12.25c0-1.24 1.01-2.25 2.25-2.25.71 0 1.36.28 1.84.73l3.06-1.77c-.04-.16-.06-.33-.06-.5 0-1.24 1.01-2.25 2.25-2.25s2.25 1.01 2.25 2.25c0 .17-.02.34-.06.5l3.06 1.77c.48-.45 1.13-.73 1.84-.73 1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25z"/>
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200">Kafka</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Featured Projects</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Showcasing my best work and innovations</p>
+            
+            <!-- Projects Grid - Row by Row -->
+            <div class="space-y-8">
+                <!-- Row 1: Essence of Uttarakhand -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-blue-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/Essence of Uttrakhand.PNG" alt="Essence of Uttarakhand Homepage"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Homepage View</h4>
+                                    <p class="text-gray-300">Main landing page showcasing Uttarakhand's beauty</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                                Essence of Uttarakhand
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A comprehensive travel website showcasing the beauty and culture of Uttarakhand. Features interactive maps, destination guides, and cultural insights.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Frontend</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">DSA</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Problem Solving</span>
+                            </div>
+                            <a href="https://essenceofuttarakhand.netlify.app/" target="_blank"
+                                class="text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-purple-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/Essence of Uttrakhand 2.PNG" alt="Essence of Uttarakhand Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Destinations Page</h4>
+                                    <p class="text-gray-300">Interactive guide to destinations</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                                Project Features
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Interactive destination maps • Cultural heritage guides • Local cuisine exploration • Travel planning tools • Weather updates
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Interactive Design</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Dynamic</span>
+                            </div>
+                            <p class="text-gray-400"><i class="fas fa-calendar mr-2"></i>Completed in 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Swadhist Junction -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-green-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/Swadhist Junction.PNG" alt="Swadhist Junction Homepage"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Homepage View</h4>
+                                    <p class="text-gray-300">Modern food delivery platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+                                Swadhist Junction
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A modern food delivery platform featuring an intuitive interface for ordering delicious meals. Includes real-time order tracking and seamless payment integration.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">CSS</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://swadhistjunction.netlify.app/" target="_blank"
+                                    class="text-green-400 hover:text-green-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/swadhist-junction" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-teal-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/Swadhist Junction 2.PNG" alt="Swadhist Junction Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Menu Interface</h4>
+                                    <p class="text-gray-300">Interactive food ordering system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                Project Features
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Real-time order tracking • Multiple payment options • Restaurant reviews • Menu customization • Order management system
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Responsive</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Dynamic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Fit Life Pro -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-pink-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/fit life pro.PNG" alt="Fit Life Pro Homepage"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Homepage View</h4>
+                                    <p class="text-gray-300">Modern fitness platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">
+                                Fit Life Pro
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A comprehensive fitness platform offering personalized workout plans, nutrition guidance, and wellness tracking with interactive exercises.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">CSS</span>
+                                <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <a href="https://fitlifepros.netlify.app/" target="_blank"
+                                class="text-pink-400 hover:text-pink-300 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-rose-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/fit life pro 1.PNG" alt="Fit Life Pro Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Enhanced Features</h4>
+                                    <p class="text-gray-300">Advanced fitness tracking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-500">
+                                Enhanced Version
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Customized workout plans • Nutrition tracking • Progress analytics • Community features • Expert guidance
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">Responsive</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Interactive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: TruthGuard -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-indigo-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/turthGuard.png" alt="TruthGuard AI"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">AI-Powered Detection</h4>
+                                    <p class="text-gray-300">Fake news detection system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">
+                                TruthGuard
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                AI-powered fake news detection system using Groq API and Google Search integration. Features real-time credibility scoring and authenticity verification.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">AI/ML</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">API</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://truth-guards.netlify.app/login.html" target="_blank"
+                                    class="text-indigo-400 hover:text-indigo-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/TruthGuard" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-violet-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/truthGuard1.png" alt="TruthGuard Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Advanced Analytics</h4>
+                                    <p class="text-gray-300">Real-time verification</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-500">
+                                Advanced Features
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Real-time credibility scoring • Authenticity verification • Hindi voice analysis • Multi-source validation • Advanced AI algorithms
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Real-time</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Secure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5: MINI S3 Bucket & MINI Project 2 -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-blue-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 1.PNG" alt="MINI S3 Bucket"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI S3 Bucket</h4>
+                                    <p class="text-gray-300">Cloud storage solution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                                MINI S3 Bucket
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A scalable cloud storage solution built with Golang, featuring file upload/download, bucket management, and AWS S3-like functionality.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Golang</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Cloud Storage</span>
+                                <span class="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-sm">Backend</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://mini-backend-deployment.onrender.com/" target="_blank"
+                                    class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/Mini-S3-Bucket" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-purple-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 2.PNG" alt="MINI Project 2"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI Project 2</h4>
+                                    <p class="text-gray-300">Advanced features</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">
+                                MINI Project 2
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Advanced system showcasing expertise in distributed systems, microservices architecture, and real-time data processing.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Microservices</span>
+                                <span class="px-3 py-1 bg-fuchsia-500/20 text-fuchsia-400 rounded-full text-sm">Real-time</span>
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Distributed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6: MINI Project 3 & Client Pulse -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-green-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 3.PNG" alt="MINI Project 3"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI Project 3</h4>
+                                    <p class="text-gray-300">Enterprise-grade solution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
+                                MINI Project 3
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Enterprise-level application demonstrating mastery of system design principles, security best practices, and scalable architecture patterns.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Enterprise</span>
+                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Secure</span>
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Production</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-sky-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/Client Pulse 1.PNG" alt="Client Pulse"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Client Pulse</h4>
+                                    <p class="text-gray-300">Client management system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">
+                                Client Pulse
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Comprehensive client management system for tracking client interactions, projects, and communications with real-time updates and analytics dashboard.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-sm">Client Management</span>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Analytics</span>
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Real-time</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://client-pulse.netlify.app/" target="_blank"
+                                    class="text-sky-400 hover:text-sky-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/Client-Pulse" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Homepage View</h4>
+                                    <p class="text-gray-300">Modern food delivery platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+                                Swadhist Junction
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A modern food delivery platform featuring an intuitive interface for ordering delicious meals. Includes real-time order tracking and seamless payment integration.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">CSS</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://swadhistjunction.netlify.app/" target="_blank"
+                                    class="text-green-400 hover:text-green-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/swadhist-junction" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-teal-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[300px] bg-gray-800 flex items-center justify-center">
+                                <img src="Images/Swadhist Junction 2.PNG" alt="Swadhist Junction Features"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Menu Interface</h4>
+                                    <p class="text-gray-300">Interactive food ordering system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                Project Features
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Real-time order tracking • Multiple payment options • Restaurant reviews • Menu customization • Order management system
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Responsive</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Dynamic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Fit Life Pro -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-pink-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/fit life pro.PNG" alt="Fit Life Pro Homepage"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Homepage View</h4>
+                                    <p class="text-gray-300">Modern fitness platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">
+                                Fit Life Pro
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A comprehensive fitness platform offering personalized workout plans, nutrition guidance, and wellness tracking with interactive exercises.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">CSS</span>
+                                <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <a href="https://fitlifepros.netlify.app/" target="_blank"
+                                class="text-pink-400 hover:text-pink-300 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-rose-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="Images/fit life pro 1.PNG" alt="Fit Life Pro Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Enhanced Features</h4>
+                                    <p class="text-gray-300">Advanced fitness tracking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-500">
+                                Enhanced Version
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Customized workout plans • Nutrition tracking • Progress analytics • Community features • Expert guidance
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">Responsive</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Interactive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: TruthGuard -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-indigo-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/turthGuard.png" alt="TruthGuard AI"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">AI-Powered Detection</h4>
+                                    <p class="text-gray-300">Fake news detection system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">
+                                TruthGuard
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                AI-powered fake news detection system using Groq API and Google Search integration. Features real-time credibility scoring and authenticity verification.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">AI/ML</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">API</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://truth-guards.netlify.app/login.html" target="_blank"
+                                    class="text-indigo-400 hover:text-indigo-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/TruthGuard" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-violet-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/truthGuard1.png" alt="TruthGuard Features"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Advanced Analytics</h4>
+                                    <p class="text-gray-300">Real-time verification</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-500">
+                                Advanced Features
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Real-time credibility scoring • Authenticity verification • Hindi voice analysis • Multi-source validation • Advanced AI algorithms
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Real-time</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Secure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5: MINI S3 Bucket & MINI Project 2 -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-blue-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 1.PNG" alt="MINI S3 Bucket"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI S3 Bucket</h4>
+                                    <p class="text-gray-300">Cloud storage solution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                                MINI S3 Bucket
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                A scalable cloud storage solution built with Golang, featuring file upload/download, bucket management, and AWS S3-like functionality.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Golang</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Cloud Storage</span>
+                                <span class="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-sm">Backend</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://mini-backend-deployment.onrender.com/" target="_blank"
+                                    class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/Mini-S3-Bucket" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-purple-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 2.PNG" alt="MINI Project 2"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI Project 2</h4>
+                                    <p class="text-gray-300">Advanced features</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">
+                                MINI Project 2
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Advanced system showcasing expertise in distributed systems, microservices architecture, and real-time data processing.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Microservices</span>
+                                <span class="px-3 py-1 bg-fuchsia-500/20 text-fuchsia-400 rounded-full text-sm">Real-time</span>
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Distributed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6: MINI Project 3 & Client Pulse -->
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-green-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/MINI 3.PNG" alt="MINI Project 3"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">MINI Project 3</h4>
+                                    <p class="text-gray-300">Enterprise-grade solution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
+                                MINI Project 3
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Enterprise-level application demonstrating mastery of system design principles, security best practices, and scalable architecture patterns.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Enterprise</span>
+                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Secure</span>
+                                <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Production</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-sky-500/50">
+                        <div class="relative group">
+                            <div class="overflow-hidden h-[350px]">
+                                <img src="images/Client Pulse 1.PNG" alt="Client Pulse"
+                                    class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-6">
+                                    <h4 class="text-white text-xl font-bold">Client Pulse</h4>
+                                    <p class="text-gray-300">Client management system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">
+                                Client Pulse
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Comprehensive client management system for tracking client interactions, projects, and communications with real-time updates and analytics dashboard.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-sm">Client Management</span>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Analytics</span>
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Real-time</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://client-pulse.netlify.app/" target="_blank"
+                                    class="text-sky-400 hover:text-sky-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                                <a href="https://github.com/Arjun9756/Client-Pulse" target="_blank"
+                                    class="text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Testimonials</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-bold">John Anderson</h4>
+                        <p class="text-blue-400">Project Manager</p>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Arjun's problem-solving skills and attention to detail are exceptional. He delivered our project ahead of schedule with excellent quality."
+                </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-bold">Sarah Williams</h4>
+                        <p class="text-blue-400">Tech Lead</p>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Working with Arjun was a great experience. His coding skills and ability to solve complex problems made our project successful."
+                </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-bold">Michael Chen</h4>
+                        <p class="text-blue-400">Startup Founder</p>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Arjun's expertise in frontend development and DSA helped us create a highly performant and user-friendly application."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+            <div class="flex justify-center space-x-6 mb-8" data-aos="fade-up">
+                <a href="https://www.linkedin.com/in/arjun-singh-negi-60b983302" target="_blank" class="text-3xl hover:text-blue-400 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Arjun9756" target="_blank" class="text-3xl hover:text-blue-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6" data-aos="fade-up">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="9eddc368-c586-4cdf-afea-5fa2e28b24c4">
+
+                    <!-- Name Input -->
+                    <div class="form-group">
+                        <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                            placeholder="John Doe">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                            placeholder="john@example.com">
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="form-group">
+                        <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                            placeholder="Your message here..."></textarea>
+                    </div>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2026 Arjun. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Images used for educational purposes only. All images are respected to their copyright owners.
+                </p>
+                <div class="flex justify-center gap-4 mt-4">
+                    <a href="https://github.com/Arjun9756" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arjun-singh-negi-60b983302" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
